@@ -6,7 +6,7 @@ import {
   ExpandSubRoutesContainer,
 } from "./style";
 
-function ExpandMenu({ route }: any) {
+function SideCategoryExpandMenu({ route }: any) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -41,4 +41,4 @@ function ExpandMenu({ route }: any) {
   );
 }
 
-export default ExpandMenu;
+export default SideCategoryExpandMenu;

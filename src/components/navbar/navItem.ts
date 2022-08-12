@@ -1,7 +1,18 @@
+import realEstate from "../../assest/images/icons/realEstate.png";
+import job from "../../assest/images/icons/jobs.png";
+import car from "../../assest/images/icons/car.png";
+import retail from "../../assest/images/icons/retail.png";
+import hotel from "../../assest/images/icons/hotel.png";
+import attraction from "../../assest/images/icons/attraction.png";
+import phone from "../../assest/images/icons/phone.png";
+import service from "../../assest/images/icons/services.png";
+import restaurant from "../../assest/images/icons/restaurant.png";
+
 const routes = [
   {
     name: "Real Estate",
     link: "/realEstate",
+    image: realEstate,
 
     subRoutes: [
       {
@@ -30,6 +41,7 @@ const routes = [
   {
     name: "Services",
     link: "/services",
+    image: service,
 
     subRoutes: [
       {
@@ -122,6 +134,7 @@ const routes = [
   {
     name: "Jobs",
     link: "/job",
+    image: job,
     subRoutes: [
       {
         name: "Accounting",
@@ -261,6 +274,7 @@ const routes = [
   {
     name: "Gadgets",
     link: "/gadgets",
+    image: phone,
     subRoutes: [
       {
         name: "Agency",
@@ -272,6 +286,7 @@ const routes = [
   {
     name: "Automobile",
     link: "/automobile",
+    image: car,
     subRoutes: [
       {
         name: "",
@@ -307,6 +322,7 @@ const routes = [
   {
     name: "Retails",
     link: "/retails",
+    image: retail,
     subRoutes: [
       {
         name: "Agriculture&Farming",
@@ -434,6 +450,7 @@ const routes = [
   {
     name: "Hotel",
     link: "/hotel",
+    image: hotel,
     subRoutes: [
       {
         name: "Guest",
@@ -453,6 +470,7 @@ const routes = [
   {
     name: "Attractions",
     link: "/attractions",
+    image: attraction,
     subRoutes: [
       {
         name: "Cinema",
@@ -480,6 +498,7 @@ const routes = [
   {
     name: "Restaurant",
     link: "/restaurant",
+    image: restaurant,
     subRoutes: [
       {
         name: "Dine In",
@@ -497,4 +516,222 @@ const routes = [
   },
 ];
 
+export const popularRoutes = [
+  {
+    name: "Real Estate",
+    link: "/realEstate",
+    image: realEstate,
+
+    subRoutes: [
+      {
+        name: "Houses&Apartment For Sale",
+        link: "/houses&apartmentforsale",
+      },
+      {
+        name: "Houses&Apartment For Rent",
+        link: "/houses&Apartmentforrent",
+      },
+      {
+        name: "Land&Plot For Sales",
+        link: "/land&plotforsales",
+      },
+      {
+        name: "Land&Plot For Rent",
+        link: "/land&plotforrent",
+      },
+      {
+        name: "Short Let",
+        link: "/shortlet",
+      },
+    ],
+  },
+
+  {
+    name: "Jobs",
+    link: "/job",
+    image: job,
+    subRoutes: [
+      {
+        name: "Accounting",
+        link: "/accounting",
+      },
+      {
+        name: "Administrative",
+        link: "/administrative",
+      },
+      {
+        name: "Advert&Marketing",
+        link: "/advert&marketing",
+      },
+      {
+        name: "Architecture",
+        link: "/architecture",
+      },
+      {
+        name: "Beauty",
+        link: "/beauty",
+      },
+      {
+        name: "Consultant",
+        link: "/consultant",
+      },
+      {
+        name: "Driver",
+        link: "/driver",
+      },
+      {
+        name: "Engineering",
+        link: "/engineering",
+      },
+      {
+        name: "Farming",
+        link: "/farming",
+      },
+      {
+        name: "HealthCare",
+        link: "/healthcare",
+      },
+      {
+        name: "Hotel",
+        link: "/hotel",
+      },
+      {
+        name: "House Keeping",
+        link: "/housekeeping",
+      },
+      {
+        name: "Human Resources",
+        link: "/humanresources",
+      },
+      {
+        name: "IT&Software",
+        link: "/it&software",
+      },
+      {
+        name: "Internship",
+        link: "/internship",
+      },
+      {
+        name: "Legal",
+        link: "/legal",
+      },
+      {
+        name: "Logistics",
+        link: "/logistics",
+      },
+      {
+        name: "Management",
+        link: "/management",
+      },
+      {
+        name: "Manufacturing",
+        link: "/manufacturing",
+      },
+      {
+        name: "Nanny",
+        link: "/nanny",
+      },
+      {
+        name: "Oil&Gas",
+        link: "/oil&gas",
+      },
+      {
+        name: "Part-Time",
+        link: "/part-time",
+      },
+      {
+        name: "Quality Control/Assurance",
+        link: "/qualitycontrol/assurance",
+      },
+      {
+        name: "Research",
+        link: "/research",
+      },
+      {
+        name: "Restaurant",
+        link: "/restaurant",
+      },
+      {
+        name: "Retail",
+        link: "/retail",
+      },
+      {
+        name: "Sales&Telemarketing",
+        link: "/sales&telemarketing",
+      },
+      {
+        name: "Security",
+        link: "/security",
+      },
+      {
+        name: "Sport",
+        link: "/sport",
+      },
+      {
+        name: "Teaching",
+        link: "/teaching",
+      },
+      {
+        name: "Technology",
+        link: "/technology",
+      },
+      {
+        name: "Travel & Tourism",
+        link: "/travel&tourism",
+      },
+      {
+        name: "Others...",
+        link: "/others...",
+      },
+    ],
+  },
+
+  {
+    name: "Gadgets",
+    link: "/gadgets",
+    image: phone,
+    subRoutes: [
+      {
+        name: "Agency",
+        link: "/agency",
+      },
+    ],
+  },
+
+  {
+    name: "Automobile",
+    link: "/automobile",
+    image: car,
+    subRoutes: [
+      {
+        name: "",
+        link: "/",
+      },
+      {
+        name: "Cars",
+        link: "/cars",
+      },
+      {
+        name: "Trucks&Trailers",
+        link: "/trucks&trailers",
+      },
+      {
+        name: "Buses&Micro Buses",
+        link: "/Buses & Micro Buses",
+      },
+      {
+        name: "Heavy Equipment",
+        link: "/heavyequipment",
+      },
+      {
+        name: "Motorcycles&Scooters",
+        link: "/motorcycles&scooters",
+      },
+      {
+        name: "Watercrafts&Boats",
+        link: "/watercrafts&boats",
+      },
+    ],
+  },
+];
 export default routes;
