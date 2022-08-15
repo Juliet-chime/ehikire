@@ -27,7 +27,7 @@ export default function Home() {
         <Fullbar>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
           voluptatum optio cum sapiente itaque quis non consequuntur deserunt
-          laboriosam beatae.
+          laboriosam beatae.fghdjskjdfhdjskjdhfcdjskdhfdjs
         </Fullbar>
       </PageWrapper>
     </div>
