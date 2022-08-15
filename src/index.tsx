@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { BrowserRouter as Router } from "react-router-dom";
-import { ChakraProvider } from "@chakra-ui/react";
+// import { ChakraProvider } from "@chakra-ui/react";
 import App from "./App";
 import GlobalStyles from "./global.css";
 import { AppContextProvider } from "./context";
@@ -14,11 +14,10 @@ root.render(
   <React.StrictMode>
     <Router>
       <GlobalStyles />
-      <ChakraProvider>
-        <AppContextProvider>
-          <App />
-        </AppContextProvider>
-      </ChakraProvider>
+      <AppContextProvider>
+        <App />
+      </AppContextProvider>
+      =
     </Router>
   </React.StrictMode>,
 );

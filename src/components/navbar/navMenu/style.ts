@@ -2,11 +2,15 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Props } from "./types";
 
-export const NavMenuHolder = styled.button`
-  position: relative;
+export const NavMenuHolder = styled.div<Props>`
+  /* position: relative; */
+  /* position: sticky;
+  top: 0; */
   width: 100%;
   border: none;
-  background-color: white;
+  border: solid red;
+  background-color: ${(props) => (props.scroll <= 100 ? "red" : "blue")};
+  /* background-color: white; */
   border-bottom: 1px solid #e0e0e0;
   display: flex;
   align-items: center;
@@ -99,7 +103,7 @@ export const SubRoutesContainer = styled.div`
   padding: 1.5rem 0.5rem;
   top: 58px;
   left: 3rem;
-  background: #e5e5e5;
+  background: white;
   /* display: none; */
   visibility: hidden;
   opacity: 0;

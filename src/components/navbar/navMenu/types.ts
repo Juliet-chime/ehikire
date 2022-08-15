@@ -7,4 +7,5 @@ export interface Props {
   ref?: any;
   current?: any;
   dropdown?: any;
+  scroll?: any;
 }

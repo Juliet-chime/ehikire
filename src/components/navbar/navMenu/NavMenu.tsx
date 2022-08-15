@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import { FaBars } from "react-icons/fa";
 import { FaBars, FaCaretDown } from "react-icons/fa";
+import { useAppContext } from "../../../context";
 import routes from "../navItem";
 import {
   MenuButton,
@@ -88,8 +89,27 @@ import { Props } from "./types";
 // }
 
 function NavMenu({ toggleDrawer }: Props) {
+  // const [scrolll, setScrolll] = useState(0);
+  const { scroll, setScroll } = useAppContext();
+
+  useEffect(() => {
+    const handleScroll = () => setScroll(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("resize", handleScroll);
+  }, [scroll]);
+
+  const scrollbarWidth = document.body.offsetWidth - document.body.clientWidth;
+  // const ff = window.scroll;
+  // alert(window.pageYOffset);
+  // alert(window.pageXOffset);
+  console.log(scroll);
+  console.log(document.documentElement.scrollHeight);
+  console.log(scrollbarWidth);
+  console.log(window.scrollY, "fg");
   return (
-    <NavMenuHolder>
+    <NavMenuHolder scroll={scroll}>
       <button type="button" onClick={toggleDrawer}>
         <span className="hidebar">
           <FaBars

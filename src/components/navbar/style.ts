@@ -3,10 +3,11 @@ import styled from "styled-components";
 // navbar style
 
 export const NavBarWrapper = styled.div`
-  position: fixed;
+  /* position: fixed;
   width: 100%;
   left: 0px;
-  z-index: 99999;
+  z-index: 99999; */
+  /* border: solid; */
 `;
 
 // navsocial style
@@ -14,10 +15,9 @@ export const NavBarWrapper = styled.div`
 export const NavSocialWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 10px 200px;
+  padding: 0px 200px;
   background: #f9d342;
   @media (max-width: 768px) {
-    padding: 10px 0px;
     justify-content: space-around;
   }
 `;
@@ -105,7 +105,7 @@ export const Language = styled.div`
 // navsocial profile
 
 export const NavProfileWrapper = styled.div`
-  padding: 5px 200px;
+  padding: 0px 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,15 +113,18 @@ export const NavProfileWrapper = styled.div`
   position: relative;
   @media (max-width: 768px) {
     justify-content: space-around;
-    padding: 5px 10px;
     background-color: #e5e5e5;
   }
   .logo {
+    width: 60px;
+    height: 60px;
     @media (max-width: 768px) {
       width: 50px;
       height: 50px;
     }
     img {
+      width: 100%;
+      height: 100%;
       @media (max-width: 768px) {
         width: 100%;
       }
@@ -129,7 +132,7 @@ export const NavProfileWrapper = styled.div`
   }
   .hub {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 29px;
     letter-spacing: -0.115385px;
     @media (max-width: 768px) {
@@ -141,13 +144,13 @@ export const NavProfileWrapper = styled.div`
   .cart-signin {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
     @media (max-width: 768px) {
       gap: 10px;
     }
     .cart {
-      width: 48px;
-      height: 48px;
+      width: 30px;
+      height: 30px;
       display: flex;
       position: relative;
       align-items: center;
@@ -165,12 +168,13 @@ export const NavProfileWrapper = styled.div`
         position: absolute;
         background: #fa3434;
         border-radius: 14px;
-        width: 22px;
-        height: 22px;
+        width: 18px;
+        height: 18px;
         display: flex;
         justify-content: center;
         align-items: center;
         top: -8px;
+        font-size: 12px;
         right: -5px;
         color: white;
         @media (max-width: 768px) {
@@ -187,7 +191,7 @@ export const NavProfileWrapper = styled.div`
       .signintextholder {
         .signintext {
           font-weight: 400;
-          font-size: 13px;
+          font-size: 12px;
           line-height: 18px;
           letter-spacing: -0.1px;
           color: #969696;
@@ -197,7 +201,7 @@ export const NavProfileWrapper = styled.div`
         }
         .myaccount {
           font-weight: 400;
-          font-size: 15px;
+          font-size: 11px;
           line-height: 22px;
           letter-spacing: -0.2px;
           color: #545454;
