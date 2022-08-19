@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const FooterWrapper = styled.div`
   .downloadapp {
     display: flex;
+    margin-top: 46px;
     justify-content: space-between;
     align-items: center;
     padding: 20px 200px 66px 200px;
@@ -46,6 +47,7 @@ export const FooterWrapper = styled.div`
         flex-wrap: wrap;
       }
       .footerMenuItem {
+        width: 130px;
         h2 {
           margin-left: 13px;
           font-size: 15px;

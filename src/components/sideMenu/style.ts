@@ -5,7 +5,7 @@ export const SideBarWrapper = styled.div<AppContextType>`
   padding: 20px 30px;
   z-index: 1;
   overflow: hidden;
-  height: auto;
+  height: 100%;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
   border-radius: 8px;
   width: ${(props) => (props.active ? "281px" : "0%")};

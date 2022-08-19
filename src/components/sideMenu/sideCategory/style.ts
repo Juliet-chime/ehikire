@@ -15,7 +15,7 @@ export const SideCategoryButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   cursor: pointer;
@@ -40,9 +40,9 @@ export const SideCategorySubRoute = styled(NavLink)`
   text-decoration: none;
   color: black;
   padding: 0.5rem;
-  font-size: 12px;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   &:hover {
     color: rgba(0, 0, 0, 0.5);
   }

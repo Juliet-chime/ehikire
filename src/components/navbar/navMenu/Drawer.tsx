@@ -1,14 +1,10 @@
 import React from "react";
+import { FaTimes } from "react-icons/fa";
+// import { Language } from "../style";
 import ExpandMenu from "./ExpandMenu";
-import {
-  Backdrop,
-  DrawerNavbarBrand,
-  DrawerNavRoute,
-  DrawerRightNav,
-  NavDrawer,
-} from "./style";
+import { Backdrop, DrawerNavRoute, DrawerRightNav, NavDrawer } from "./style";
 import { Props } from "./types";
-import logo from "../../../assest/images/picture/ekiLogo.png";
+import flag from "../../../assest/images/icons/flag.png";
 
 function Drawer({ isOpen, toggleDrawer, routes }: Props) {
   return (
@@ -16,9 +12,12 @@ function Drawer({ isOpen, toggleDrawer, routes }: Props) {
       {isOpen && <Backdrop onClick={toggleDrawer} />}
       <NavDrawer isOpen={isOpen}>
         <DrawerRightNav>
-          <DrawerNavbarBrand>
-            <img src={logo} alt="" />
-          </DrawerNavbarBrand>
+          <div className="drawerNav">
+            <h4>The Home of satisfaction</h4>
+            <button type="button" onClick={toggleDrawer}>
+              <FaTimes fontSize={18} />
+            </button>
+          </div>
           <div>
             {routes?.map((route: any) => {
               if (route.subRoutes) {
@@ -37,6 +36,19 @@ function Drawer({ isOpen, toggleDrawer, routes }: Props) {
                 </DrawerNavRoute>
               );
             })}
+          </div>
+          <div className="language-login">
+            <div className="languagefeature">
+              <select>
+                <option>Language</option>
+                <option value="">English</option>
+              </select>
+              <span>
+                <img src={flag} alt="flag" />
+              </span>
+            </div>
+
+            <button type="button">Signin / Signup</button>
           </div>
         </DrawerRightNav>
       </NavDrawer>

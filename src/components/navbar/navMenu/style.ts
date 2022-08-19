@@ -3,14 +3,12 @@ import { NavLink } from "react-router-dom";
 import { Props } from "./types";
 
 export const NavMenuHolder = styled.div<Props>`
-  /* position: relative; */
-  /* position: sticky;
-  top: 0; */
   width: 100%;
   border: none;
-  border: solid red;
-  background-color: ${(props) => (props.scroll <= 100 ? "red" : "blue")};
-  /* background-color: white; */
+  position: ${(props) => (props.scroll >= 100 ? "fixed" : "relative")};
+  top: ${(props) => (props.scroll >= 100 ? "0" : "none")};
+  z-index: ${(props) => (props.scroll >= 100 ? "99999" : "none")};
+  background-color: white;
   border-bottom: 1px solid #e0e0e0;
   display: flex;
   align-items: center;
@@ -32,11 +30,6 @@ export const NavMenuHolder = styled.div<Props>`
     line-height: 18px;
     letter-spacing: -0.115385px;
     color: #111111;
-  }
-  .hidebar {
-    @media (max-width: 768px) {
-      display: none;
-    }
   }
   .showcategory {
     display: none;
@@ -89,41 +82,67 @@ export const NavRoute = styled(NavLink)`
 `;
 
 // subRoutes style
-
 export const SubRoutesContainer = styled.div`
   position: absolute;
-  width: 200vh;
-  overflow: hidden;
+  min-width: 12rem;
   z-index: -9;
-  text-align: justify;
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.5);
-  padding: 1.5rem 0.5rem;
-  top: 58px;
-  left: 3rem;
-  background: white;
-  /* display: none; */
+  flex-direction: column;
+  box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  left: -1rem;
   visibility: hidden;
   opacity: 0;
-  border-radius: 0rem 0rem 1rem 1rem;
-  /* transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out; */
-  .div1 {
-    display: flex;
-    flex-direction: column;
-  }
+  border-radius: 1rem;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
 `;
 
+// export const SubRoutesContainer = styled.div`
+//   /* position: absolute;
+//   width: 200vh;
+//   overflow: hidden; */
+//   /* z-index: -9; */
+//   /* text-align: justify; */
+//   /* display: flex; */
+//   /* justify-content: center;
+//   gap: 15px; */
+//   /* box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.5);
+//   padding: 1.5rem 0.5rem;
+//   top: 50px;
+//   left: 3rem;
+//   background: red; */
+//   /* display: none; */
+//   /* display: none; */
+//   /* visibility: hidden;
+//   opacity: 0; */
+//   /* border-radius: 0rem 0rem 1rem 1rem; */
+//   /* transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out; */
+//   /* .div1 {
+//     display: flex;
+//     flex-direction: column;
+//   } */
+// `;
+
 export const SubRouteMenu = styled.div`
-  /* position: relative; */
-  /* display: inline-block; */
+  position: relative;
+  display: inline-block;
   &:hover ${SubRoutesContainer} {
     visibility: visible;
     opacity: 1;
     cursor: pointer;
   }
 `;
+
+// export const SubRouteMenu = styled.div`
+//   /* position: relative; */
+//   /* display: inline-block; */
+//   &:hover ${SubRoutesContainer} {
+//     /* display: block; */
+//     /* visibility: visible;
+//     opacity: 1;
+//     cursor: pointer; */
+//   }
+// `;
 
 export const MenuButton = styled(NavLink)`
   padding: 0.5rem 0.7rem;
@@ -199,7 +218,7 @@ export const NavDrawer = styled.div<Props>`
   position: absolute;
   top: 0;
   height: 100vh;
-  width: 60%;
+  width: 80%;
   overflow: scroll;
   background-color: white;
   transition: 0.3s ease;
@@ -211,6 +230,40 @@ export const DrawerRightNav = styled.div`
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
+  .drawerNav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0px;
+    button {
+      background-color: transparent;
+      border: none;
+    }
+  }
+  .language-login {
+    border-top: 1px solid #eee;
+    padding: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .languagefeature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      select {
+        border: none;
+        font-size: 16px;
+      }
+    }
+    button {
+      width: 60%;
+      padding: 10px 15px;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: transparent;
+    }
+  }
 `;
 
 export const DrawerNavbarBrand = styled.h2`
@@ -223,7 +276,6 @@ export const DrawerNavRoute = styled(NavLink)`
   display: flex;
   text-decoration: none;
   color: black;
-  font-size: 1rem;
   padding: 0.5rem;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
@@ -258,4 +310,23 @@ export const NavButtonHolder = styled.div`
 
 export const Uli = styled.ul<Props>`
   display: ${(props) => (props.dropdown ? "block" : "none")}; ;
+`;
+export const SmallScreenNav = styled.div`
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+  background-color: white;
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  h4 {
+    font-size: 20px;
+  }
 `;

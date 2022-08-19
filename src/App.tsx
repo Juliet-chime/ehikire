@@ -35,12 +35,12 @@ function App() {
         </Routes>
       </BodyWrapper>
 
-      <p style={{ paddingTop: "500px", zIndex: "-1" }}>
+      {/* <p style={{ zIndex: "-1" }}>
         hell Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
         commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
         magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
         s sagittis magna. Sed consequat, leo eget
-      </p>
+      </p> */}
 
       <Footer />
     </div>

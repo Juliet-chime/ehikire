@@ -1,7 +1,5 @@
 import React from "react";
-// import routes from "../../navbar/navItem";
 import { DrawerNavRoute } from "../../navbar/navMenu/style";
-// import ExpandMenu from "../navbar/navMenu/ExpandMenu";
 import SideCategoryExpandMenu from "./sideCategoryExpand";
 import { SideMenuTypes } from "./SidemenuType";
 import { SideMenuHeading } from "./style";
